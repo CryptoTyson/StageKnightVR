@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.hecomi.uwindowcapture": "https://github.com/hecomi/uWindowCapture.git#upm",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.feature.development": "1.0.1",
     "com.unity.feature.vr": "1.0.0",
@@ -45,5 +46,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "uWindowCapture",
+      "url": "https://registry.npmjs.com",
+      "scopes": [
+        "com.hecomi"
+      ]
+    }
+  ]
 }
