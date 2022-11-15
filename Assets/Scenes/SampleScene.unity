@@ -1142,7 +1142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ec9af872ddd7b4da9082595cc58d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paragraph: This is a test para
+  paragraph: 
 --- !u!1 &1045848415
 GameObject:
   m_ObjectHideFlags: 0

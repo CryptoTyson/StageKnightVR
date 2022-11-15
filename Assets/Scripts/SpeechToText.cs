@@ -37,7 +37,7 @@ public class SpeechToText : MonoBehaviour
     }
     private void DictationRecognizer_OnDictationResult(string text, ConfidenceLevel confidence)
     {
-        paragraph += text + " ";
+        paragraph += text + ". ";
         Debug.Log("Dictation result: " + text);
     }
     private void DictationRecognizer_OnDictationError(string error, int hresult)
