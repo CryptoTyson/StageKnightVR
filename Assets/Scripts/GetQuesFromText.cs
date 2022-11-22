@@ -32,8 +32,6 @@ public class GetQuesFromText : MonoBehaviour
     {
         StartCoroutine(GetQues());
         Debug.Log("Question Bank - ");
-        foreach (string item in questionBank)
-            Debug.Log(item);
     }
 
      IEnumerator GetQues()
@@ -48,7 +46,7 @@ public class GetQuesFromText : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("text", para);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://587d-35-227-68-8.ngrok.io/text", form);
+        UnityWebRequest www = UnityWebRequest.Post("http://c500-34-125-252-111.ngrok.io/text", form);
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success)
