@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.hecomi.udesktopduplication": {
+      "version": "https://github.com/hecomi/uDesktopDuplication.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "4619d21fb5379aa486e44bafebcc6f3bf4f26b7f"
+    },
     "com.hecomi.uwindowcapture": {
       "version": "https://github.com/hecomi/uWindowCapture.git#upm",
       "depth": 0,
@@ -80,7 +87,7 @@
     },
     "com.unity.inputsystem": {
       "version": "1.4.1",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
@@ -210,7 +217,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.management": {
-      "version": "4.2.0",
+      "version": "4.2.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -242,7 +249,7 @@
     },
     "com.unity.xr.openxr": {
       "version": "1.4.2",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.xr.management": "4.0.1",
