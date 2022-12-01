@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Windows.Speech;
+
 public class SpeechToText : MonoBehaviour
 {
     protected DictationRecognizer dictationRecognizer;

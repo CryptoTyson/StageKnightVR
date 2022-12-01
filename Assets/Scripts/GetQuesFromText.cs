@@ -46,7 +46,7 @@ public class GetQuesFromText : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("text", para);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://c500-34-125-252-111.ngrok.io/text", form);
+        UnityWebRequest www = UnityWebRequest.Post("http://bc4b-34-75-157-152.ngrok.io/text", form);
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success)
@@ -59,6 +59,8 @@ public class GetQuesFromText : MonoBehaviour
             ArrayList arrayList = new ArrayList(questionsOutput.output.questions);
             foreach (Questions item in arrayList)
                 questionBank.Add(item.Question);
+            foreach (Questions item in arrayList)
+                Debug.Log(item.Question);
         }
     } 
 }
