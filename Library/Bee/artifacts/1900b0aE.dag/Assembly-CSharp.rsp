@@ -386,8 +386,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/uWindowCapture.Runtime.ref.dll"
-"Assets/SpeechToText.cs"
-"Assets/XRPlatformControllerSetup.cs"
+"Assets/Scripts/GetQuesFromText.cs"
+"Assets/Scripts/SpeechToText.cs"
 -langversion:9.0
 
 /deterministic
