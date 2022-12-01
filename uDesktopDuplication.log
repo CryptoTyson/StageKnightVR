@@ -1,15 +1,15 @@
-[uDD::Log][2022-12-01 13:08:10] Start
-[uDD::Log][2022-12-01 13:08:10] OS Version    : 10.0
-[uDD::Log][2022-12-01 13:08:10] Build Number  : 19044
-[uDD::Log][2022-12-01 13:08:10] Service Pack  : 
-[uDD::Log][2022-12-01 13:08:10] Graphics Card [0] : NVIDIA Quadro P5000
-[uDD::Log][2022-12-01 13:08:10]   > Monitor[0] : \\.\DISPLAY1
-[uDD::Log][2022-12-01 13:08:10] Graphics Card [1] : Intel(R) UHD Graphics P630
-[uDD::Log][2022-12-01 13:08:10] Graphics Card [2] : Microsoft Basic Render Driver
-[uDD::Log][2022-12-01 13:08:10] Monitor::Initialized() =>
-[uDD::Log][2022-12-01 13:08:10]     ID    : 0
-[uDD::Log][2022-12-01 13:08:10]     Size  : (2560, 1080)
-[uDD::Log][2022-12-01 13:08:10]     DPI   : (81, 81)
-[uDD::Log][2022-12-01 13:08:10]     Rot   : Landscape
-[uDD::Log][2022-12-01 13:08:10] Duplicator::Initialize() => OK.
-[uDD::Log][2022-12-01 13:09:10] Stop
+[uDD::Log][2022-12-01 14:00:21] Start
+[uDD::Log][2022-12-01 14:00:21] OS Version    : 10.0
+[uDD::Log][2022-12-01 14:00:21] Build Number  : 19044
+[uDD::Log][2022-12-01 14:00:21] Service Pack  : 
+[uDD::Log][2022-12-01 14:00:21] Graphics Card [0] : NVIDIA Quadro P5000
+[uDD::Log][2022-12-01 14:00:21]   > Monitor[0] : \\.\DISPLAY1
+[uDD::Log][2022-12-01 14:00:21] Graphics Card [1] : Intel(R) UHD Graphics P630
+[uDD::Log][2022-12-01 14:00:21] Graphics Card [2] : Microsoft Basic Render Driver
+[uDD::Log][2022-12-01 14:00:21] Monitor::Initialized() =>
+[uDD::Log][2022-12-01 14:00:21]     ID    : 0
+[uDD::Log][2022-12-01 14:00:21]     Size  : (2560, 1080)
+[uDD::Log][2022-12-01 14:00:21]     DPI   : (81, 81)
+[uDD::Log][2022-12-01 14:00:21]     Rot   : Landscape
+[uDD::Log][2022-12-01 14:00:21] Duplicator::Initialize() => OK.
+[uDD::Log][2022-12-01 14:01:12] Stop
