@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine;
 using System;
+using UnityEngine.Windows.Speech;
 
 public class GetQuesFromText : MonoBehaviour
 {
@@ -30,8 +31,19 @@ public class GetQuesFromText : MonoBehaviour
     public List<string> questionBank;
     void Start()
     {
+       // if(FindObjectOfType<SpeechToText>().checkDictationStatus() == SpeechSystemStatus.Stopped)
+        //{
+       // }
         StartCoroutine(GetQues());
-        Debug.Log("Question Bank - ");
+        //StartCoroutine(GetQuesFromQuestionBank());
+    }
+
+
+     IEnumerator GetQuesFromQuestionBank()
+    {
+        yield return new WaitForSeconds(30);
+        foreach (string item in questionBank)
+            Debug.Log("Question Bank - " + item);
     }
 
      IEnumerator GetQues()
@@ -46,7 +58,7 @@ public class GetQuesFromText : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("text", para);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://bc4b-34-75-157-152.ngrok.io/text", form);
+        UnityWebRequest www = UnityWebRequest.Post("http://705e-35-194-244-66.ngrok.io/text", form);
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success)
@@ -59,8 +71,6 @@ public class GetQuesFromText : MonoBehaviour
             ArrayList arrayList = new ArrayList(questionsOutput.output.questions);
             foreach (Questions item in arrayList)
                 questionBank.Add(item.Question);
-            foreach (Questions item in arrayList)
-                Debug.Log(item.Question);
         }
     } 
 }

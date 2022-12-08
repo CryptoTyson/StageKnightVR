@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
 
@@ -6,6 +7,7 @@ public class SpeechToText : MonoBehaviour
     protected DictationRecognizer dictationRecognizer;
     [HideInInspector]
     public string paragraph = "";
+    public bool askQuestion = false;
 
     void Start()
     {
@@ -38,6 +40,12 @@ public class SpeechToText : MonoBehaviour
     }
     private void DictationRecognizer_OnDictationResult(string text, ConfidenceLevel confidence)
     {
+        if (Regex.IsMatch(text, "questions", RegexOptions.IgnoreCase) || Regex.IsMatch(text, "question", RegexOptions.IgnoreCase))
+        {
+            askQuestion = true;
+            Debug.Log("Keyword matched - " + text);
+        }
+
         paragraph += text + ". ";
         Debug.Log("Dictation result: " + text);
     }
@@ -76,5 +84,15 @@ public class SpeechToText : MonoBehaviour
     public string GetParagraph()
     {
         return paragraph;
+    }
+
+    public bool checkAskQuestion()
+    {
+        return askQuestion;
+    }
+
+    public SpeechSystemStatus checkDictationStatus()
+    {
+        return dictationRecognizer.Status;
     }
 }

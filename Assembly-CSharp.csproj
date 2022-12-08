@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\SpeechToText.cs" />
     <Compile Include="Assets\Scripts\GetQuesFromText.cs" />
     <Compile Include="Assets\XRPlatformControllerSetup.cs" />
+    <Compile Include="Assets\Scripts\AskQuestion.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
