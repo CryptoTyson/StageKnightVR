@@ -44,10 +44,13 @@ public class SpeechToText : MonoBehaviour
         {
             askQuestion = true;
             Debug.Log("Keyword matched - " + text);
+            return;
         }
 
         paragraph += text + ". ";
         Debug.Log("Dictation result: " + text);
+        StartCoroutine(FindObjectOfType<GetQuesFromText>().GetQues(paragraph));
+        paragraph = "";
     }
     private void DictationRecognizer_OnDictationError(string error, int hresult)
     {

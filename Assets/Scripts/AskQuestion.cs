@@ -36,6 +36,14 @@ public class AskQuestion : MonoBehaviour
     {
         int randIdx = UnityEngine.Random.Range(0, FindObjectOfType<GetQuesFromText>().questionBank.Count);
         int randVH = UnityEngine.Random.Range(0, 4);
+        if(randVH == 0 || randVH == 3)
+        {
+            language = "en-us";
+        }
+        else
+        {
+            language = "en-ie";
+        }
         VhAnim = VHs[randVH].GetComponent<Animator>();
         foreach (string item in FindObjectOfType<GetQuesFromText>().questionBank)
             Debug.Log("Question Bank - " + item);

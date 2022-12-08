@@ -31,10 +31,7 @@ public class GetQuesFromText : MonoBehaviour
     public List<string> questionBank;
     void Start()
     {
-       // if(FindObjectOfType<SpeechToText>().checkDictationStatus() == SpeechSystemStatus.Stopped)
-        //{
-       // }
-        StartCoroutine(GetQues());
+        //StartCoroutine(GetQues());
         //StartCoroutine(GetQuesFromQuestionBank());
     }
 
@@ -46,19 +43,19 @@ public class GetQuesFromText : MonoBehaviour
             Debug.Log("Question Bank - " + item);
     }
 
-     IEnumerator GetQues()
+     public IEnumerator GetQues(string para)
     {
-        yield return new WaitForSeconds(15);
-        string para = FindObjectOfType<SpeechToText>().GetParagraph();
+       // yield return new WaitForSeconds(15);
+        //string para = FindObjectOfType<SpeechToText>().GetParagraph();
 
         Root questionsOutput = new Root();
 
-        Debug.Log("Paragraph :" + para);
+        Debug.Log("Getting ques for : " + para);
 
         WWWForm form = new WWWForm();
         form.AddField("text", para);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://705e-35-194-244-66.ngrok.io/text", form);
+        UnityWebRequest www = UnityWebRequest.Post("http://b77f-35-189-187-146.ngrok.io/text", form);
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success)
@@ -71,6 +68,7 @@ public class GetQuesFromText : MonoBehaviour
             ArrayList arrayList = new ArrayList(questionsOutput.output.questions);
             foreach (Questions item in arrayList)
                 questionBank.Add(item.Question);
+            Debug.Log("Ques generated for : " + para);
         }
     } 
 }
